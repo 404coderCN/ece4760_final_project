@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Welcome to Jekyll!
-subtitle: A awesome static site generator.
-author: Jeffrey
+title: Glove-controlled robot hand
+subtitle: an ECE4760 final project
+author: Jerry Jin
 categories: jekyll
 banner:
   video: https://vjs.zencdn.net/v/oceans.mp4
