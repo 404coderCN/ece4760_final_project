@@ -1,4 +1,9 @@
 home:
   heading: "A glove-controlled robot hand"
   subheading: "By Jerry Jin, Caroline Huang, Canwen Zhang"
-  banner: "Your image url"
+  banner: 
+  banner: 
+      video: assets/images/banners/home_page.mp4
+      loop: true
+      volume: 0
+      start_at: 0
