@@ -35,7 +35,9 @@ The deisgn of this project can be split into two parts: the robot hand, and the 
 ### Robot hand
 Our entire robot hand is 3D printed using PLA material. PLA is known for its high strength, low thermal-expansion, and non-toxic nature and is easily accessible in labs. These properties make PLA ideal for 3D printing. For the individual components of the hand, we used models from an open-source website—InMoov—with slight adjustments in the wrist. Table 1 shows all the components and corresponding cost. When printing these components, we chose an infill of 20% to ensure the hand is robust enough to withstand external force. After printing is completed, we assembled them using epoxy glue. For each finger joint, we inserted in short strips of filament and electrical wires to fill the holes. 
 
-<img align="left" src="assets/images/banners/hand1.jpg" width="250" height="300"> ![](assets/images/banners/hand1.jpg)
+<p><img align="margin-left" src="assets/images/banners/about.jpg" height="450" width="650"></p>
+
+<!-- <img align="left" src="assets/images/banners/hand1.jpg" width="250" height="300"> ![](assets/images/banners/hand1.jpg) -->
 
 <!-- <img src="{{ "/assets/images/banners/hand1.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="printed parts" />
 <img src="{{ "/assets/images/banners/hand2.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="partly assembled" />
