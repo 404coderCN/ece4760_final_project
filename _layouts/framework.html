@@ -8,14 +8,14 @@ layout: default
      {{ content }}
 
   </section>
-  <section class="sidebar" style="margin-left: 15px;">
+  <!-- <section class="sidebar" style="margin-left: 15px;"> -->
     <!-- Get sidebar items -->
-    {%- if page.sidebar -%}
+    <!-- {%- if page.sidebar -%}
       {%- assign sidebar = page.sidebar -%}
     {%- elsif site.defaults[page.layout].sidebar -%}
       {%- assign sidebar = site.defaults[page.layout].sidebar -%}
-    {%- elsif layout.sidebar -%}
-      {%- assign sidebar = layout.sidebar -%}
+    {%- elsif layout.sidebar -%} -->
+      <!-- {%- assign sidebar = layout.sidebar -%}
     {%- endif -%}
 
     {%- for item in sidebar -%}
@@ -28,8 +28,8 @@ layout: default
 
       {%- assign file = 'sidebar/' | append: file -%}
 
-      {%- include {{ file }} %}
+      {%- include {{ file }} %} -->
 
-    {%- endfor -%}
+    <!-- {%- endfor -%} -->
   </section>
 </div>
