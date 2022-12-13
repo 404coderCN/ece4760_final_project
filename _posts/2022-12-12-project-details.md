@@ -37,11 +37,13 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
 
 
 
-<!-- <img align="left" src="https://raw.githubusercontent.com/404coderCN/ece4760_final_project/gh-pages/assets/images/banners/hand1.jpg" width="250" height="300">  -->
+<img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="250" height="300">
+<img align="center" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="250" height="300">
+<img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="250" height="300"> 
 
-<img src="{{ "/assets/images/banners/hand1.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="printed parts" />
+<!-- <img src="{{ "/assets/images/banners/hand1.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="printed parts" />
 <img src="{{ "/assets/images/banners/hand2.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="partly assembled" />
-<img src="{{ "/assets/images/banners/hand3.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="assembled hand" />
+<img src="{{ "/assets/images/banners/hand3.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="assembled hand" /> -->
 
 
 
