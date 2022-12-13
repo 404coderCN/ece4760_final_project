@@ -80,7 +80,7 @@ Noticeably, there is a balance of hardware and software design in the project, a
 
 <div>
 <center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/pwm_slices.jpg" width="500" height="280">
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/pwm_slices.jpg" width="650" height="280">
 <figcaption align="center"> Figure 2: RP2040 PWM slice table </figcaption>
 </center>
 </div>
@@ -109,6 +109,7 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
 <img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img  src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img  src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
 </center>
 </div> 
+
 
 <div>
 <center>
@@ -142,35 +143,34 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
     <td>Thumb</td>
     <td>0.6</td>
   </tr>
-  </tr>
+  <tr>
     <td>Ring finger</td>
     <td>0.27</td>
   </tr>
-  </tr>
+  <tr>
     <td>Index finger</td>
     <td>0.3</td>
   </tr>
-  </tr>
+  <tr>
     <td>Midlle finger</td>
     <td>0.35</td>
   </tr>
-  </tr>
+  <tr>
     <td>Bolts</td>
     <td>0.29</td>
   </tr>
-  </tr>
+  <tr>
     <td>Hand covers</td>
     <td>1.13</td>
   </tr>
-  </tr>
+  <tr>
     <td>Servo wheels</td>
     <td>0.26</td>
   </tr>
-  </tr>
+  <tr>
     <td>Servo stand</td>
     <td>1.33</td>
   </tr>
-
 </table>
 </center>
 </div>
