@@ -146,19 +146,23 @@ yat:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-# header_pages:
+header_pages:
 #   - index.html
 #   - archives.html
 #   - categories.html
 #   - tags.html
-#   - about.md
+  - about.md
 
 Page default value
 defaults:
   home:
     heading: "A glove-controlled robot hand"
     subheading: "By Jerry Jin, Caroline Huang, Canwen Zhang"
-    banner: assets/images/banners/yeah.gif
+    banner: 
+      video: assets/images/banners/home_page.mp4
+      loop: true
+      volume: 0
+      start_at: 0
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
