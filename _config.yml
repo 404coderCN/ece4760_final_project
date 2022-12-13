@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: A glove-controlled robot hand
+title: ECE4760 final project
 email: yj253@cornell.edu
 author: Jerry Jin
 
@@ -153,12 +153,12 @@ yat:
 #   - tags.html
 #   - about.md
 
-# Page default value
-# defaults:
-#   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
-#     banner: "Your image url"
+Page default value
+defaults:
+  home:
+    heading: "A glove-controlled robot hand"
+    subheading: "By Jerry Jin, Caroline Huang, Canwen Zhang"
+    banner: assets/images/banners/yeah.gif
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
