@@ -16,7 +16,7 @@ banner:
   min_height: "38vh"
   heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
   subheading_style: "color: gold"
-tags: jekyll theme yat
+tags: microcontroller 
 sidebar: []
 ---
 
@@ -35,9 +35,10 @@ The deisgn of this project can be split into two parts: the robot hand, and the 
 ### Robot hand
 Our entire robot hand is 3D printed using PLA material. PLA is known for its high strength, low thermal-expansion, and non-toxic nature and is easily accessible in labs. These properties make PLA ideal for 3D printing. For the individual components of the hand, we used models from an open-source website—InMoov—with slight adjustments in the wrist. Table 1 shows all the components and corresponding cost. When printing these components, we chose an infill of 20% to ensure the hand is robust enough to withstand external force. After printing is completed, we assembled them using epoxy glue. For each finger joint, we inserted in short strips of filament and electrical wires to fill the holes. 
 
-<p><img align="left" src="assets/images/banners/hand1.jpg" height="300" width="250"></p> 
-<p><img align="center" src="assets/images/banners/hand2.jpg" height="300" width="250"></p>
-<p><img align="right" src="assets/images/banners/hand3.jpg" height="300" width="250"></p>
+<img src="{{ "assets/images/banners/hand1.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="printed parts" />
+<img src="{{ "assets/images/banners/hand2.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="partly assembled" />
+<img src="{{ "assets/images/banners/hand3.jpg" | prepend: site.baseurl | prepend: site.url}}" height="300" width="250"alt="assembled hand" />
+
 
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
