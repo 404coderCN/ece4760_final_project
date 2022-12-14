@@ -224,15 +224,7 @@ We referred to the public Github repository of <a class="highlight-link" href="h
 
 ## Final demo video
 
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/watch?v=G2LN8rhvrco&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=34"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
->
-</iframe>
+[![Final demo video](https://404codercn.github.io/ece4760_final_project//assets/images/banners/demo_vid.jpg)](https://www.youtube.com/watch?v=G2LN8rhvrco&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=34)
 
 ## Appendix
 <p>
