@@ -104,6 +104,12 @@ We will discuss the design of our hardware in two parts: the robot hand and the 
 ### Robot hand
 Our entire robot hand is 3D printed using PLA material. PLA is known for its high strength, low thermal-expansion, and non-toxic nature and is easily accessible in labs. These properties make PLA ideal for 3D printing. For the individual components of the hand, we used models from an open-source website—InMoov—with slight adjustments in the wrist. Table 1 shows all the components and corresponding cost. When printing these components, we chose an infill of 20% to ensure the hand is robust enough to withstand external force. After printing was completed, we assembled them using epoxy glue. For each finger joint, we inserted short strips of filament and electrical wires to fill the holes.
 
+<p>
+<div>
+<img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
+</div> 
+</p>
+
 
 <div>
 <table>
@@ -169,11 +175,6 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
 </table>
 </div>
 
-<p>
-<div>
-<img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
-</div> 
-</p>
 
 <p>
 The movement of the fingers are achieved by pulling on the wire that goes through each joint. We used braided fishing wire to link the fingers together as it can withstand a relatively large amount of force, which is necessary considering that the MG996R servo motor can exert up to 11 kg/cm of stall torque. The wires are routed to the wrist of the robot hand and wraps around a servo wheel.
@@ -193,6 +194,8 @@ When testing the entire robot hand circuit, we initially powered the servos by w
 
 ### Control glove
 On the control glove side, the goal is to collect curvature data from the flex sensors and send them to the robot hand using a transceiver. Under the hood, the flex sensors work as variable resistors. By connecting them in series with 10K resistors and connecting wires in between to ADCs on the microcontroller, we can determine the change in voltage level which reflects the bending of flex sensors. When the flex sensors are bent, the materials inside get close together and the resistance increases. 
+
+However, during the actual implementation, we found that the flex sensor readings fluctuates a lot when applied a small force. The correlation between bending angle and flex sensor readings are not always the same, and after bending the sensor a few more times, the values take longer and longer to change when the flex sensor is straightened up. We also found that the flex sensor readings wrap around when the sensor is bent past a certain angle, which sometimes causes incorrect behavior. After setting up the flex sensor circuit on the glove, we found that the robot hand will consistently and randomly twitch, which makes the whole system very unstable. Some of the potential causes of this behavior include the inherent angle of the glove and the extreme sensitivity of the flex sensors. After a few more experiments, we unfortunately had to give up using the glove and instead control the fingers by manually bending the flex sensors.
 
 ## Conclusion
 Overall, our project successfully fulfilled the initial proposal. The core of our project, wireless control of the robot hand, functioned well in the sense that the robot fingers will move accordingly as the bend of flex sensors. Even when multiple flex sensors are bent simultaneously, the delay of robot fingers’ movement is negligible. In terms of safety relating to our system, we set the lower and the upper bound for the turning degree of servo motors to make sure the hardware will not break. Moreover, to ensure security of our mechanical hauling system, we choose to use the fishing thread that could sustain 30 lb to connect all joints of the robot finger with the servo motor. 
