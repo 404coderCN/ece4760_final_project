@@ -40,7 +40,7 @@ author: Jerry Jin
 #   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
 #   "Copyright © 2017-2021 Foobar"
 #
-copyright: "Unpublished Work (cleft) 2022 {Jerry}"
+copyright: "Copyright © 2019-2023 {Jerry Industries} "
 
 description: >- # this means to ignore newlines until "baseurl:"
   An awesome robot hand project designed at Cornell
