@@ -80,13 +80,6 @@ Noticeably, there is a balance of hardware and software design in the project, a
 
 <div>
 <center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receiver_setup.jpg" width="500" height="350">
-<figcaption align="center"> Figure 2: Receiver side setup </figcaption>
-</center>
-</div>
-
-<div>
-<center>
 <img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/pwm_slices.jpg" width="750" height="250">
 <figcaption align="center"> Figure 2: RP2040 PWM slice table </figcaption>
 </center>
@@ -188,6 +181,13 @@ After the mechanical side of the robot hand was complete, we started adding on s
 
 When testing the entire robot hand circuit, we initially powered the servos by wiring its power pin to VBUS of the raspberry pi pico, and the pico itself is powered by connecting to a computer. The VBUS pin directly connects to the 5V input from the micro-USB port and should provide 5V power to the servo. However, our computer reboots every time the code runs. We suspect this happens because the servos are drawing too much current from the computer, which causes it to go to sleep. To address this problem, we used a battery case with 4 AA batteries to externally supply power to the servos.
 </p>
+
+<div>
+<center>
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receiver_setup.jpg" width="500" height="350">
+<figcaption align="center"> Figure 2: Receiver side setup </figcaption>
+</center>
+</div>
 
 ### Control glove
 On the control glove side, the goal is to collect curvature data from the flex sensors and send them to the robot hand using a transceiver. Under the hood, the flex sensors work as variable resistors. By connecting them in series with 10K resistors and connecting wires in between to ADCs on the microcontroller, we can determine the change in voltage level which reflects the bending of flex sensors. When the flex sensors are bent, the materials inside get close together and the resistance increases. 
