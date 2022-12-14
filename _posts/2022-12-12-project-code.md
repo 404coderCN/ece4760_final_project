@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Glove-controlled robot hand
-subtitle: an ECE4760 final project
+title: Final project code
+subtitle: C code for the final project
 author: Jerry Jin
 categories: jekyll
 banner:

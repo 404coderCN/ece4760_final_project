@@ -80,14 +80,14 @@ Noticeably, there is a balance of hardware and software design in the project, a
 
 <div>
 <center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receiver_setup.jpg" width="550" height="300">
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receiver_setup.jpg" width="500" height="350">
 <figcaption align="center"> Figure 2: Receiver side setup </figcaption>
 </center>
 </div>
 
 <div>
 <center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/pwm_slices.jpg" width="750" height="280">
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/pwm_slices.jpg" width="750" height="250">
 <figcaption align="center"> Figure 2: RP2040 PWM slice table </figcaption>
 </center>
 </div>
@@ -109,11 +109,6 @@ Your browser does not support the video tag.
 We will discuss the design of our hardware in two parts: the robot hand and the control glove.
 ### Robot hand
 Our entire robot hand is 3D printed using PLA material. PLA is known for its high strength, low thermal-expansion, and non-toxic nature and is easily accessible in labs. These properties make PLA ideal for 3D printing. For the individual components of the hand, we used models from an open-source website—InMoov—with slight adjustments in the wrist. Table 1 shows all the components and corresponding cost. When printing these components, we chose an infill of 20% to ensure the hand is robust enough to withstand external force. After printing was completed, we assembled them using epoxy glue. For each finger joint, we inserted short strips of filament and electrical wires to fill the holes.
-
-
-<div>
-<img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
-</div> 
 
 
 <div>
@@ -157,7 +152,7 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
     <td>0.3</td>
   </tr>
   <tr>
-    <td>Midlle finger</td>
+    <td>Middle finger</td>
     <td>0.35</td>
   </tr>
   <tr>
@@ -180,6 +175,11 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
 </center>
 </div>
 
+
+<div>
+<img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
+</div> 
+
 The movement of the fingers are achieved by pulling on the wire that goes through each joint. We used braided fishing wire to link the fingers together as it can withstand a relatively large amount of force, which is necessary considering that the MG996R servo motor can exert up to 11 kg/cm of stall torque. The wires are routed to the wrist of the robot hand and wraps around a servo wheel.
 
 
@@ -201,7 +201,7 @@ Lastly, the flex sensors are too sensitive that they sometimes send incorrect se
 The proposed solutions to the above drawbacks will be discussed in the next section.
 
 
-**Solution and improvements:**
+### Solution and improvements:
 
 To address the above three main drawbacks, here are what we could do in the future:
 
@@ -217,10 +217,14 @@ We referred to the public Github repository of <a class="highlight-link" href="h
 
 
 ## Appendix
+<p>
 The group approves this report for inclusion on the course website.
+</p>
 The group approves the video for inclusion on the course youtube channel.
 
 **References:**
+
+<div>
 <a class="highlight-link" href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf" target="_blank" rel="noreferrer">RP2040 datasheet</a>
 
 <a class="highlight-link" href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf" target="_blank" rel="noreferrer">Raspberry pi pico C/C++ SDK</a>
@@ -234,3 +238,5 @@ The group approves the video for inclusion on the course youtube channel.
 <a class="highlight-link" href="https://www.instructables.com/Robotic-Hand-With-Wireless-Glove-Controlled-NRF24L/" target="_blank" rel="noreferrer">Instructables project</a>
 
 <a class="highlight-link" href="https://inmoov.fr/hand-and-forarm/" target="_blank" rel="noreferrer">inMoov robot model</a>
+
+</div>
