@@ -31,6 +31,7 @@ Inspired by this idea, our final project is to build a robot hand that can mimic
 The purpose of the project is to build a robot hand whose actions could be controlled wirelessly by a sensor glove. The implementation consists of three major parts: assembling a 3D-printed robot arm whose gesture would be controlled by servos, soldering flex sensors to fingers of the sensor glove which would be connected to GPIO ports of a RP2040 microcontroller, and establishing wireless communication between the glove and the robot arm with nRF2401 transceivers. The required hardware components are listed as following and the 3D printing arm parts prototype could be referenced in the following website:
 
 <table>
+<center>
   <tr>
     <th>Components</th>
     <th>Quantity</th>
@@ -61,7 +62,7 @@ The purpose of the project is to build a robot hand whose actions could be contr
     <td>1</td>
     <td><a class="highlight-link" href="https://www.amazon.com/-/es/DEX-FIT-resistentes-el%C3%A1stico-inteligente/dp/B07HHZ4PRZ/ref=sr_1_43_mod_primary_new?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PFRXFN4KW460&keywords=electrical%2Bglove&qid=1667437203&qu=eyJxc2MiOiI0LjAxIiwicXNhIjoiMy43MyIsInFzcCI6IjIuODcifQ%3D%3D&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=electrical%2Bglove%2Caps%2C105&sr=8-43&th=1&language=en_US" target="_blank"       rel="noreferrer">Amazon</a></td>
   </tr>
-
+</center>
 </table>
 
 In particular, three flex sensors have been used to measure the amount of deflection of the sensor glove’s fingers. As flex sensors function as variable resistors, we created a voltage divider circuit with 10k resistors for each of the flex sensors. To be more specific, the GND end of the all flex sensors are connected to the GND port of the Raspberry Pi Pico, and the + 3.3 V from the Raspberry Pi are connected to the main positive voltage wire of the voltage divider circuits. The wire from the other end of each flex sensor is connected to separate Analog-to-Digital GPIO ports – 26, 27, and 28 – to reflect how much each flex sensor bends. The specific connection could be seen in Figure 1. 
@@ -105,8 +106,8 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
 
 
 <div>
-<center>
 <table>
+<center>
 <caption>Table 1: Cost of 3D printing</caption>
   <tr>
     <th>Part</th>
@@ -164,14 +165,15 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
     <td>Servo stand</td>
     <td>1.33</td>
   </tr>
-</table>
 </center>
+</table>
 </div>
 
-
+<p>
 <div>
 <img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
 </div> 
+</p>
 
 <p>
 The movement of the fingers are achieved by pulling on the wire that goes through each joint. We used braided fishing wire to link the fingers together as it can withstand a relatively large amount of force, which is necessary considering that the MG996R servo motor can exert up to 11 kg/cm of stall torque. The wires are routed to the wrist of the robot hand and wraps around a servo wheel.
@@ -184,7 +186,7 @@ When testing the entire robot hand circuit, we initially powered the servos by w
 
 <div>
 <center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receiver_setup.jpg" width="500" height="350">
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receiver_setup.jpg" width="500" height="320">
 <figcaption align="center"> Figure 2: Receiver side setup </figcaption>
 </center>
 </div>
@@ -226,9 +228,7 @@ The group approves the video for inclusion on the course youtube channel.
 
 **References:**
 
-<div>
 <a class="highlight-link" href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf" target="_blank" rel="noreferrer">RP2040 datasheet</a>
-</div>
 
 <a class="highlight-link" href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf" target="_blank" rel="noreferrer">Raspberry pi pico C/C++ SDK</a>
 
