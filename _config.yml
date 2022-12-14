@@ -147,7 +147,7 @@ yat:
 header_pages:
   - index.html
   - about.html
-  # - categories.html
+  - gallery.html
   # - tags.html
   # - about.md
 
