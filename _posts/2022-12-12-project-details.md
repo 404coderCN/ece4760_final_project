@@ -21,7 +21,7 @@ sidebar: []
 
 ## Introduction
 
-Nowadays, robot hands are everywhere. They don’t just serve as a toy to be played with, but also exist in educational and industrial sectors. The best thing about robot hands is that they can never get tired or injured. They can help us with repetitive and mundane tasks and can operate in conditions that we cannot stand. These characteristics make them perfect for completing tasks in extreme conditions. But the challenge of using a robot hand is that it is very difficult to operate it exactly the way we want. More specifically, we cannot control its fingers like we control ours, which limits its ability to complete delicate tasks. This led us to think if we can build a robot hand that can precisely follow our movements.
+Nowadays, robot hands are everywhere. They don’t just serve as a toy to be played with, but also exist in educational and industrial sectors. The best thing about robot hands is that they can never get tired or injured. They can help us with repetitive and mundane tasks and can operate in conditions that human cannot stand. These characteristics make them perfect for completing tasks in extreme conditions. But the challenge of using a robot hand is that it is very difficult to operate it exactly the way we want. More specifically, we cannot control its fingers like we control ours, which limits its ability to complete delicate tasks. This led us to think if we can build a robot hand that can precisely follow our movements.
 
 Inspired by this idea, our final project is to build a robot hand that can mimic human fingers' movements. To accomplish this goal, we designed a control glove that collects curvature data from a set of flex sensors and transmits this data via a transceiver to the robot hand. The microcontroller connected to the robot hand then maps this curvature data to the corresponding duty cycle and thus controls the servo movement using PWM. We will discuss the technical details in the following sections.
 
@@ -68,7 +68,7 @@ In particular, three flex sensors have been used to measure the amount of deflec
 
 <div>
 <center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/transmiter_setup.jpg" width="450" height="300">
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/transmiter_setup.jpg" width="550" height="300">
 <figcaption align="center"> Figure 1: Transmitter side setup </figcaption>
 </center>
 </div>
@@ -80,7 +80,14 @@ Noticeably, there is a balance of hardware and software design in the project, a
 
 <div>
 <center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/pwm_slices.jpg" width="650" height="280">
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receiver_setup.jpg" width="550" height="300">
+<figcaption align="center"> Figure 2: Receiver side setup </figcaption>
+</center>
+</div>
+
+<div>
+<center>
+<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/pwm_slices.jpg" width="750" height="280">
 <figcaption align="center"> Figure 2: RP2040 PWM slice table </figcaption>
 </center>
 </div>
@@ -92,22 +99,20 @@ The communication between the two microcontrollers was achieved through NRF24L01
 
 Through experimentation, it is determined that the flex sensor presents a digital value around 50 when held straight and a digital value around 150 when held bending over. As a result, we would set the duty cycle as 2000 – corresponding to robot arm finger bending down – when the signal of the flex sensor is detected to be lower than 100. On the other hand, we would set the duty cycle as 1000 – corresponding to the robot arm finger straight up – when the signal of the flex sensor is detected to be bigger than 100. 
 
-<video width="500" height="300" controls>
+<video width="600" height="400" controls>
   <source src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receive_data.mp4" type="video/mp4">
   <source src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/receive_data.ogg" type="video/ogg">
 Your browser does not support the video tag.
 </video>
 
 ## Hardware deisgn
-We will discuss the design of our hardware in two parts; the robot hand and the control glove.
+We will discuss the design of our hardware in two parts: the robot hand and the control glove.
 ### Robot hand
 Our entire robot hand is 3D printed using PLA material. PLA is known for its high strength, low thermal-expansion, and non-toxic nature and is easily accessible in labs. These properties make PLA ideal for 3D printing. For the individual components of the hand, we used models from an open-source website—InMoov—with slight adjustments in the wrist. Table 1 shows all the components and corresponding cost. When printing these components, we chose an infill of 20% to ensure the hand is robust enough to withstand external force. After printing was completed, we assembled them using epoxy glue. For each finger joint, we inserted short strips of filament and electrical wires to fill the holes.
 
 
 <div>
-<center>
-<img src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img  src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img  src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
-</center>
+<img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
 </div> 
 
 
@@ -206,9 +211,26 @@ To address the above three main drawbacks, here are what we could do in the futu
 
 (3)	Adding an average function in our code. This function is responsible for taking average of received sensor data over a short period of time and determine the movement of robot fingers. In this way we could reduce much of the back and forth movement because of a few inaccurate data.
 
-Intellectual Property Consideration:
-Our design of robot hand is based on the open-source project called <a class="highlight-link" href="https://inmoov.fr/hand-and-forarm/" target="_blank" rel="noreferrer">inMoov</a>, including all 3D-printing files and the instructions for assembling the robot hand. 
-For the transceiver driver module for Raspberry Pi Pico, we referred to the public Github page of <a class="highlight-link" href="https://github.com/AndyRids/pico-nrf24" target="_blank" rel="noreferrer">AndyRids</a>.
+**Intellectual Property Consideration:**
+Our design of robot hand is based on the open-source project called <a class="highlight-link" href="https://inmoov.fr/hand-and-forarm/" target="_blank" rel="noreferrer">inMoov</a>, including most 3D-printing files and the instructions for assembling the robot hand. This platform is available to everyone and thus using their design does not violate any intellectual property rights. 
+We referred to the public Github repository of <a class="highlight-link" href="https://github.com/AndyRids/pico-nrf24" target="_blank" rel="noreferrer">AndyRids</a> for using the nRF24L01+ transceiver with raspberry pi pico.
 
 
 ## Appendix
+The group approves this report for inclusion on the course website.
+The group approves the video for inclusion on the course youtube channel.
+
+**References:**
+<a class="highlight-link" href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf" target="_blank" rel="noreferrer">RP2040 datasheet</a>
+
+<a class="highlight-link" href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf" target="_blank" rel="noreferrer">Raspberry pi pico C/C++ SDK</a>
+
+<a class="highlight-link" href="https://www.sparkfun.com/datasheets/Components/SMD/nRF24L01Pluss_Preliminary_Product_Specification_v1_0.pdf" target="_blank" rel="noreferrer">nRF24L01+ datasheet</a>
+
+<a class="highlight-link" href="https://github.com/AndyRids/pico-nrf24" target="_blank" rel="noreferrer">nRF24L01+ driver</a>
+
+<a class="highlight-link" href="https://components101.com/motors/mg996r-servo-motor-datasheet" target="_blank" rel="noreferrer">MG996R datasheet</a>
+
+<a class="highlight-link" href="https://www.instructables.com/Robotic-Hand-With-Wireless-Glove-Controlled-NRF24L/" target="_blank" rel="noreferrer">Instructables project</a>
+
+<a class="highlight-link" href="https://inmoov.fr/hand-and-forarm/" target="_blank" rel="noreferrer">inMoov robot model</a>
