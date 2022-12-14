@@ -104,13 +104,12 @@ We will discuss the design of our hardware in two parts: the robot hand and the 
 ### Robot hand
 Our entire robot hand is 3D printed using PLA material. PLA is known for its high strength, low thermal-expansion, and non-toxic nature and is easily accessible in labs. These properties make PLA ideal for 3D printing. For the individual components of the hand, we used models from an open-source website—InMoov—with slight adjustments in the wrist. Table 1 shows all the components and corresponding cost. When printing these components, we chose an infill of 20% to ensure the hand is robust enough to withstand external force. After printing was completed, we assembled them using epoxy glue. For each finger joint, we inserted short strips of filament and electrical wires to fill the holes.
 
-<p>
+
 <div>
 <img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand1.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand2.jpg" width="200" height="300"><img align="left" src="https://404codercn.github.io/ece4760_final_project//assets/images/banners/hand3.jpg" width="200" height="300">
 </div> 
-</p>
 
-
+<p>
 <div>
 <table>
 <center>
@@ -174,7 +173,7 @@ Our entire robot hand is 3D printed using PLA material. PLA is known for its hig
 </center>
 </table>
 </div>
-
+</p>
 
 <p>
 The movement of the fingers are achieved by pulling on the wire that goes through each joint. We used braided fishing wire to link the fingers together as it can withstand a relatively large amount of force, which is necessary considering that the MG996R servo motor can exert up to 11 kg/cm of stall torque. The wires are routed to the wrist of the robot hand and wraps around a servo wheel.
@@ -218,10 +217,18 @@ To address the above three main drawbacks, here are what we could do in the futu
 
 (3)	Adding an average function in our code. This function is responsible for taking average of received sensor data over a short period of time and determine the movement of robot fingers. In this way we could reduce much of the back and forth movement because of a few inaccurate data.
 
-**Intellectual Property Consideration:**
+#### Intellectual Property Consideration:
 Our design of robot hand is based on the open-source project called <a class="highlight-link" href="https://inmoov.fr/hand-and-forarm/" target="_blank" rel="noreferrer">inMoov</a>, including most 3D-printing files and the instructions for assembling the robot hand. This platform is available to everyone and thus using their design does not violate any intellectual property rights. 
 We referred to the public Github repository of <a class="highlight-link" href="https://github.com/AndyRids/pico-nrf24" target="_blank" rel="noreferrer">AndyRids</a> for using the nRF24L01+ transceiver with raspberry pi pico.
 
+
+## Final demo video
+
+<video width="600" height="400" controls>
+  <source src="https://www.youtube.com/watch?v=G2LN8rhvrco&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=34" type="video/mp4">
+  <source src="https://www.youtube.com/watch?v=G2LN8rhvrco&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=34" type="video/ogg">
+Your browser does not support the video tag.
+</video>
 
 ## Appendix
 <p>
