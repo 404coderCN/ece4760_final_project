@@ -224,11 +224,15 @@ We referred to the public Github repository of <a class="highlight-link" href="h
 
 ## Final demo video
 
-<video width="600" height="400" controls>
-  <source src="https://www.youtube.com/watch?v=G2LN8rhvrco&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=34" type="video/mp4">
-  <source src="https://www.youtube.com/watch?v=G2LN8rhvrco&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=34" type="video/ogg">
-Your browser does not support the video tag.
-</video>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/watch?v=G2LN8rhvrco&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=34"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
 
 ## Appendix
 <p>
